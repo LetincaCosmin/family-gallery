@@ -7,6 +7,7 @@ const withPWA = nextPwa({
 
 const nextConfig = {
   reactStrictMode: true,
+  turbopack: false,   // 👈 asta rezolvă eroarea de pe Vercel
 };
 
 export default withPWA(nextConfig);
