@@ -26,13 +26,13 @@ function Particles() {
   return (
     <Points ref={ref} positions={positions} stride={3} frustumCulled>
       <PointMaterial
-        transparent
-        color="#7dd3fc"
-        size={0.05}
-        sizeAttenuation
-        depthWrite={false}
-        opacity={0.6}
-      />
+  transparent
+  color="#ffffff"
+  size={0.03}
+  sizeAttenuation
+  depthWrite={false}
+  opacity={0.20}
+/>
     </Points>
   );
 }
@@ -41,10 +41,11 @@ export default function ThreeBackground() {
   return (
     <div className="bg-3d-canvas">
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[5, 5, 5]} intensity={1.2} color="#38bdf8" />
+        <ambientLight intensity={0.25} />
+        <pointLight position={[5, 5, 5]} intensity={0.35} color="#ffffff" />
         <Particles />
       </Canvas>
     </div>
   );
 }
+
