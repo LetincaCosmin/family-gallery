@@ -222,10 +222,10 @@ export default function AdminPage() {
 
   if (!authed) {
     return (
-      <div className="min-h-dvh bg-transparent text-white flex items-center justify-center p-6">
+      <div className="min-h-dvh bg-transparent text-slate-900 flex items-center justify-center p-6">
         <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 shadow-xl">
           <h1 className="text-2xl font-semibold">Admin</h1>
-          <p className="text-white/70 mt-2">Introdu parola de admin.</p>
+          <p className="text-slate-700 mt-2">Introdu parola de admin.</p>
 
           <form onSubmit={onSubmit} className="mt-6 space-y-3">
             <input
@@ -250,12 +250,12 @@ export default function AdminPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-transparent text-white p-6">
+    <main className="min-h-dvh bg-transparent text-slate-900 p-6">
       <div className="max-w-6xl mx-auto space-y-6">
         <header className="flex items-center justify-between gap-3">
           <div>
             <h1 className="text-2xl font-semibold">Admin Panel</h1>
-            <p className="text-white/60 text-sm mt-1">Albume / Evenimente</p>
+            <p className="text-slate-500 text-sm mt-1">Albume / Evenimente</p>
           </div>
 
           <div className="flex gap-2">
@@ -319,12 +319,12 @@ export default function AdminPage() {
             </div>
 
             {loadingAlbums ? (
-              <p className="text-white/60 mt-3">Încarc albumele...</p>
+              <p className="text-slate-500 mt-3">Încarc albumele...</p>
             ) : null}
 
             {saveMsg ? (
               <p
-                className={`text-sm mt-3 ${saveMsg.startsWith("Eroare") ? "text-red-300" : "text-white/70"}`}
+                className={`text-sm mt-3 ${saveMsg.startsWith("Eroare") ? "text-red-300" : "text-slate-500"}`}
               >
                 {saveMsg}
               </p>
@@ -361,7 +361,7 @@ export default function AdminPage() {
                 Creează local
               </button>
 
-              <p className="text-xs text-white/60">
+              <p className="text-xs text-slate-500">
                 Albumul apare imediat, dar devine „real” după{" "}
                 <span className="font-mono">Save to GitHub</span>.
               </p>
@@ -380,26 +380,26 @@ export default function AdminPage() {
                 {selectedAlbum ? selectedAlbum.title : "Niciun album selectat"}
               </h2>
               {selectedAlbum?.date ? (
-                <p className="text-sm text-white/60 mt-1">
+                <p className="text-sm text-slate-500 mt-1">
                   {selectedAlbum.date}
                 </p>
               ) : null}
               {selectedAlbum?.description ? (
-                <p className="text-sm text-white/70 mt-2">
+                <p className="text-sm text-slate-500 mt-2">
                   {selectedAlbum.description}
                 </p>
               ) : null}
             </div>
 
             {selectedAlbum ? (
-              <span className="text-xs text-white/60">
+              <span className="text-xs text-slate-500">
                 {selectedAlbum.photos?.length || 0} poze
               </span>
             ) : null}
           </div>
 
           {!selectedAlbum ? (
-            <p className="text-white/60 mt-4">
+            <p className="text-slate-500 mt-4">
               Creează sau selectează un album ca să poți adăuga poze.
             </p>
           ) : selectedAlbum.photos?.length ? (
@@ -416,7 +416,7 @@ export default function AdminPage() {
                     className="w-full aspect-square object-cover"
                   />
                   <div className="p-2 flex justify-between items-center">
-                    <span className="text-[11px] text-white/60 truncate">
+                    <span className="text-[11px] text-slate-500 truncate">
                       {p.public_id || "photo"}
                     </span>
                     <button
@@ -431,10 +431,11 @@ export default function AdminPage() {
               ))}
             </div>
           ) : (
-            <p className="text-white/60 mt-4">Album gol. Urcă poze mai sus.</p>
+            <p className="text-slate-500 mt-4">Album gol. Urcă poze mai sus.</p>
           )}
         </div>
       </div>
     </main>
   );
 }
+
