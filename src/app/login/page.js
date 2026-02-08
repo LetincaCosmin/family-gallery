@@ -38,14 +38,14 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-dvh bg-transparent text-white flex items-center justify-center p-6">
+    <div className="min-h-dvh bg-transparent text-slate-900 flex items-center justify-center p-6">
       <motion.div
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 shadow-xl"
       >
         <h1 className="text-2xl font-semibold">Galeria familiei</h1>
-        <p className="text-white/70 mt-2">
+        <p className="text-slate-700 mt-2">
           Introdu parola ca să vezi albumele.
         </p>
 
@@ -71,3 +71,4 @@ export default function LoginPage() {
     </div>
   );
 }
+
