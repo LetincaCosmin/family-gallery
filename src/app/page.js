@@ -21,7 +21,7 @@ function AlbumCard({ album, onOpen }) {
             className="w-full h-full object-cover"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-white/40">
+          <div className="w-full h-full flex items-center justify-center text-slate-400">
             Fără cover
           </div>
         )}
@@ -30,12 +30,12 @@ function AlbumCard({ album, onOpen }) {
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h3 className="font-semibold text-white">{album.title}</h3>
+            <h3 className="font-semibold text-slate-900">{album.title}</h3>
             {album.date ? (
-              <p className="text-sm text-white/60 mt-1">{album.date}</p>
+              <p className="text-sm text-slate-500 mt-1">{album.date}</p>
             ) : null}
           </div>
-          <span className="text-xs text-white/60">
+          <span className="text-xs text-slate-500">
             {album.photos?.length || 0} poze
           </span>
         </div>
@@ -81,12 +81,12 @@ export default function HomePage() {
   const albums = useMemo(() => data.albums || [], [data]);
 
   return (
-    <main className="min-h-dvh bg-transparent text-white p-6">
+    <main className="min-h-dvh bg-transparent text-slate-900 p-6">
       <div className="max-w-6xl mx-auto">
         <header className="flex items-center justify-between gap-3">
           <div>
             <h1 className="text-2xl font-semibold">LET-Digital Gallery</h1>
-            <p className="text-white/60 text-sm mt-1">Albume & evenimente</p>
+            <p className="text-slate-500 text-sm mt-1">Albume & evenimente</p>
           </div>
 
           <div className="flex gap-2">
@@ -165,7 +165,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-white/40">
+                  <div className="w-full h-full flex items-center justify-center text-slate-400">
                     Fără cover
                   </div>
                 )}
@@ -177,7 +177,7 @@ export default function HomePage() {
                     {selected.title}
                   </h2>
                   {selected.date ? (
-                    <p className="text-white/60 mt-1">{selected.date}</p>
+                    <p className="text-slate-500 mt-1">{selected.date}</p>
                   ) : null}
                 </div>
               </div>
