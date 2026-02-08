@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <ParallaxRig />
         <ThreeBackground />
         {/* Background scene (layered, 3D-ish) */}
-        <div aria-hidden="true" className="bg-scene" />
+        <div aria-hidden="true" className="canvas-bg" />
 
         {/* Content */}
         <div className="relative z-10">{children}</div>
